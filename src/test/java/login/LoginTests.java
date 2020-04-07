@@ -11,8 +11,8 @@ public class LoginTests extends BaseTests {
     @Test
     public void testSuccessfulLogin(){
         LoginPage loginPage = homePage.clickIntrainCont();
-        loginPage.setUsername("sprancenatuc@yahoo.com");
-        loginPage.setPassword("tobatama94C");
+      //  loginPage.setUsername("***");
+       // loginPage.setPassword("***");
         SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
         Assert.assertTrue(secureAreaPage.getAlertText().
                 contains("In aceasta sectiune gasesti toate informatiile legate de contul tau si de comenzile efectuate."),
