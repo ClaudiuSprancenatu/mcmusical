@@ -7,6 +7,7 @@ public class SecureAreaPage {
 
     private WebDriver driver;
     private By statusAlert = By.className("user-cover");
+    private By statusError = By.className("error");
 
     public SecureAreaPage(WebDriver driver){
         this.driver = driver;
@@ -14,6 +15,10 @@ public class SecureAreaPage {
 
     public String getAlertText(){
        return driver.findElement(statusAlert).getText();
+    }
+
+    public String getErrorText(){
+        return driver.findElement(statusError).getText();
     }
 
 }

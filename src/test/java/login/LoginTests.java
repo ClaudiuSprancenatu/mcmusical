@@ -19,4 +19,15 @@ public class LoginTests extends BaseTests {
                 "Alert text is incorrect!");
     }
 
+    @Test
+    public void testWrongLogin(){
+        LoginPage loginPage = homePage.clickIntrainCont();
+        loginPage.setUsername("hella@yahoo.com");
+        loginPage.setPassword("qwerty");
+        SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
+        Assert.assertTrue(secureAreaPage.getErrorText().
+                        contains("Adresa de e-mail / parola introduse sunt incorecte. Te rugam sa incerci din nou."),
+                "Alert text is incorrect!");
+    }
+
 }
